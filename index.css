@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Titillium Web', sans-serif;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: #1f1f1f;
+}
+
+.row {
+	height: 20px;
+}
+
+.square {
+	display: inline-block;
+	width: 20px;
+	height: 100%;
+	border-radius: 0;
+	border: 1px solid #e9e9e9;
+	background-color: white;
+	cursor: pointer;
+}
+
+.start {
+	background-color: green;
+}
+
+.wall {
+	background-color: blue;
+}
+
+.current {
+	background-color: skyblue;
+}
+
+.neighbor {
+	background-color: yellow;
+}
+
+.route {
+	background-color: skyblue;
+}
+
+.end {
+	background-color: red;
+}
+
+button {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1rem;
+	padding: 0.75em 1.5em;
+	margin: 1em;
+}
+
+select {
+	font-size: 1rem;
+}
+
+label {
+	color: #e9e9e9;
+}
+
+.Title {
+	text-align: center;
+	color: #e9e9e9;
+	margin-bottom: 0.75em;
+}
+
+.boardContainer {
+	position: relative;
+	overflow: hidden;
+}
+
+.help {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.75);
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	transition: left 0.5s ease-in-out;
+}
+
+.helpBtn {
+	margin-left: auto;
+}
+
+.btnContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+h2 {
+	text-align: center;
+	color: #e9e9e9;
+}
+
+ol {
+	width: 80%;
+	margin: 0 auto;
+}
+
+li {
+	color: #e9e9e9;
+	margin-bottom: 1em;
+}
