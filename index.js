@@ -130,13 +130,7 @@ class App extends React.Component {
 
 	//determines if node is currently a wall
 	isWall = (i, j) => {
-		//start and end points cant be walls
-		if (i === this.state.start[0] && j === this.state.start[1]) {
-			return false;
-		}
-		if (i === this.state.end[0] && j === this.state.end[1]) {
-			return false;
-		}
+		
 		return this.state.walls[i][j];
 	};
 
@@ -152,6 +146,13 @@ class App extends React.Component {
 			this.setState({ end: [i, j] });
 			this.setState({ endSelect: false });
 		} else {
+			//start and end points cant be walls
+			if (i === this.state.start[0] && j === this.state.start[1]) {
+				return;
+			}
+			if (i === this.state.end[0] && j === this.state.end[1]) {
+				return;
+			}
 			this.setState({ mouseDown: true });
 			let walls = this.state.walls.slice();
 			let wall = !walls[i][j];
@@ -168,6 +169,13 @@ class App extends React.Component {
 	//if cursor passes over square while mouseDown=true, toggle wall status
 	handleMouseEnter = (i, j) => {
 		if (this.state.mouseDown) {
+			//start and end points cant be walls
+			if (i === this.state.start[0] && j === this.state.start[1]) {
+				return;
+			}
+			if (i === this.state.end[0] && j === this.state.end[1]) {
+				return;
+			}
 			let walls = this.state.walls.slice();
 			let wall = !walls[i][j];
 			walls[i][j] = wall;
