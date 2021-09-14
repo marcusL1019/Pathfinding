@@ -1,30 +1,16 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
 	font-family: 'Titillium Web', sans-serif;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	justify-content: center;
+	align-items: center;
 	background-color: #1f1f1f;
 }
 
@@ -48,6 +34,10 @@ body {
 
 .wall {
 	background-color: blue;
+}
+
+.visited {
+	background-color: chartreuse;
 }
 
 .current {
@@ -99,8 +89,6 @@ label {
 	left: 100%;
 	width: 100%;
 	height: 100%;
-	-webkit-transition: left 0.5s ease-in-out;
-	-o-transition: left 0.5s ease-in-out;
 	transition: left 0.5s ease-in-out;
 }
 
@@ -109,15 +97,9 @@ label {
 }
 
 .btnContainer {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 h2 {
